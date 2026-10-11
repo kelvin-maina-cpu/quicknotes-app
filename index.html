@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>QuickNotes</h1>
+      <p>Capture notes, sort them by category, and revisit them quickly.</p>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="add-note-heading" class="card-section">
+      <h2 id="add-note-heading">Add a Note</h2>
+      <form id="note-form">
+        <label for="note-input">Note</label>
+        <input id="note-input" name="note-input" type="text" autocomplete="off">
+
+        <label for="note-category">Category</label>
+        <select id="note-category" name="note-category">
+          <option value="personal">Personal</option>
+          <option value="work">Work</option>
+          <option value="study">Study</option>
+        </select>
+
+        <button type="submit">Add Note</button>
+      </form>
+      <p id="error-message" aria-live="polite"></p>
+    </section>
+
+    <section aria-labelledby="notes-heading" class="card-section">
+      <h2 id="notes-heading">Your Notes</h2>
+
+      <label for="search-input">Search notes</label>
+      <input id="search-input" name="search-input" type="search" autocomplete="off" placeholder="Search by note text">
+
+      <ul id="notes-list"></ul>
+      <p id="note-count">You have no notes yet.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>QuickNotes helps you store short notes without leaving the page.</p>
+  </footer>
+</body>
+</html>
